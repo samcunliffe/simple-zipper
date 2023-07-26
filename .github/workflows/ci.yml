@@ -27,6 +27,8 @@ jobs:
       
     - name: Debug dump CMakeCache.txt
       run: |
+        cmake --version
+        ctest --version
         cat ${{github.workspace}}/build/CMakeCache.txt
         cat ${{github.workspace}}/build/CTestTestfile.cmake
 
