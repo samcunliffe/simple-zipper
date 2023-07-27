@@ -37,5 +37,5 @@ jobs:
 
     - name: Test
       working-directory: ${{github.workspace}}/build
-      run: ctest --output-on-failure --extra-verbose
+      run: ctest --output-on-failure --extra-verbose -C ${{env.BUILD_TYPE}}
 
