@@ -31,10 +31,11 @@ jobs:
     - name: Test
       working-directory: ${{github.workspace}}/build
       run: |
-        cat D:/a/simple-zipper/simple-zipper/build/DartConfiguration.tcl
+        ls
+        cat DartConfiguration.tcl
         ctest -C "${{env.BUILD_TYPE}}" --verbose
 
-    - name: Setup tmate session
-      uses: mxschmitt/action-tmate@v3
-      with:
-        limit-access-to-actor: true
+    #- name: Setup tmate session
+    #  uses: mxschmitt/action-tmate@v3
+    #  with:
+    #    limit-access-to-actor: true
